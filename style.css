@@ -1,0 +1,21 @@
+/* Custom scrollbar & smooth transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+.zara-logo {
+  font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif;
+  letter-spacing: -0.08em;
+  font-weight: 900;
+}
+
+.custom-underline-input {
+  border: none;
+  border-bottom: 1px solid #111;
+  outline: none;
+  background: transparent;
+}
+
+.dark .custom-underline-input {
+  border-bottom: 1px solid #eee;
+}
