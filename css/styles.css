@@ -4,6 +4,17 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  min-height: 100%;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Helvetica Neue', 'inter', sans-serif, 'arial';
+  transition: background-color 300ms, color 300ms;
+}
+
 .zara-logo {
   font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif;
   letter-spacing: -0.08em;
