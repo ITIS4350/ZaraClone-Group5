@@ -12,7 +12,7 @@ themeToggleBtn?.addEventListener('click', () => {
   updateThemeToggle();
 });
 
-// CSS handles drawer transitions without delayed class changes.
+
 const menuBtn = document.getElementById('menu-btn');
 const closeMenuBtn = document.getElementById('close-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');

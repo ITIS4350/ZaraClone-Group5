@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Bag | ZARA</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bag.css">
+</head>
+
+<body class="bag-page">
+  <div id="site-header-placeholder"></div>
+
+  <main class="bag-layout">
+    <section class="bag-products" aria-labelledby="bag-title">
+      <div class="bag-heading">
+        <div><p class="bag-eyebrow">Your Bag</p><h1 id="bag-title"><span data-item-count>0</span> <span id="item-word">Items</span></h1></div>
+        <p class="bag-subtotal">Subtotal <strong data-subtotal>$0</strong></p>
+      </div>
+      <div class="bag-items" id="bag-items"></div>
+      <noscript><p>Please enable JavaScript to view your bag.</p></noscript>
+      <!-- bag.js fills it using products.js. -->
+      <template id="bag-item-template">
+        <article class="bag-item">
+          <div class="product-photo">
+            <img class="product-image" alt="" width="130" hidden>
+            <span class="product-image-placeholder">Image coming soon</span>
+          </div>
+          <div class="product-details">
+            <div class="product-heading">
+              <div>
+                <h2 class="product-name"></h2>
+                <p class="product-color"></p>
+                <p class="product-size"></p>
+              </div>
+              <strong class="product-price"></strong>
+            </div>
+            <div class="product-actions">
+              <div class="quantity-control" role="group">
+                <button type="button" data-action="decrease">-</button>
+                <output class="quantity"></output>
+                <button type="button" data-action="increase">+</button>
+              </div>
+              <button type="button" class="remove-item" data-action="remove">
+                <img src="assets/bag/trash.svg" alt="">
+                <span class="remove-fallback" aria-hidden="true">Remove</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </template>
+      <div id="empty-bag" class="empty-bag" hidden><h2>Your bag is empty</h2><p>Find something you love from our latest collection.</p><a href="zara_landing_page.html">Continue shopping</a></div>
+      <p class="shipping-note">Free shipping on orders over $150</p>
+    </section>
+    <aside class="order-summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Order Summary</h2>
+      <dl class="summary-details">
+        <div><dt>Subtotal (<span data-item-count>0</span> <span id="summary-item-word">items</span>)</dt><dd data-subtotal>$0</dd></div>
+        <div><dt>Shipping</dt><dd id="shipping-cost">Free</dd></div>
+        <div><dt>Est. tax</dt><dd id="tax-total">$0</dd></div>
+      </dl>
+      <div class="summary-total"><span>Total</span><strong id="order-total">$0</strong></div>
+      <button type="button" id="continue-shipping" class="checkout-button">Continue to Shipping <span id="checkout-total">$0</span></button>
+      <p id="checkout-notice" class="checkout-notice" role="status" hidden>The shipping page is not available yet. This bag is a prototype; no order has been placed.</p>
+    </aside>    
+    <!-- remove once we have a real checkout page -->
+    <p id="cart-storage-notice" class="checkout-notice" role="status" hidden>Cart storage is unavailable. Changes will last only while this page is open.</p>
+    <p id="bag-status" class="visually-hidden" role="status" aria-live="polite"></p>
+  </main>
+  <script src="js/header.js"></script>
+  <script src="js/Interactivity.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/bag.js"></script>
+</body>
+</html>
