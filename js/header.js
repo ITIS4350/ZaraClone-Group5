@@ -88,7 +88,7 @@
 
       <div class="menu-footer">
         <a href="#">Settings</a>
-        <a href="help.html">Help &amp; Support</a>
+        <a href="help/index.html">Help &amp; Support</a>
         <a href="bag_page.html">Shopping Bag</a>
       </div>
     </div>
