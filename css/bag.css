@@ -40,12 +40,8 @@
 .quantity-control button:hover { background: var(--surface-color); }
 .quantity-control button:disabled { opacity: 0.4; cursor: default; }
 .quantity { width: 32px; text-align: center; font-size: 14px; font-weight: 700; }
-.remove-item { padding: 6px; border-radius: 8px; opacity: 0.5; }
+.remove-item { font-size: 12px; color: #c53434; padding: 6px; border-radius: 8px; opacity: 0.5; }
 .remove-item:hover { opacity: 1; }
-.remove-item img { max-width: none; }
-.remove-fallback { display: none; font-size: 12px; color: #c53434; }
-.remove-item.asset-missing img { display: none; }
-.remove-item.asset-missing .remove-fallback { display: inline; }
 .shipping-note { padding-top: 20px; font-size: 13px; }
 .order-summary { display: flex; flex-direction: column; gap: 20px; padding: 24px; border: 1px solid var(--background-color); border-radius: 16px; box-shadow: 0 1px 2px rgb(0 0 0 / 0.07); }
 .order-summary h2 { font-size: 18px; font-weight: 700; line-height: 27px; }

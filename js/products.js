@@ -25,10 +25,10 @@ const products = [
     "price": 120,
     "colors": ["Ivory", "Black", "Grey"],
     "sizes": ["XS", "S", "M", "L", "XL"],
-    "image": "assets/bag/wool-quarter-zip.png",
+    "image": "assets/products/wool-quarter-zip.png",
     "imageHeight": 173.328,
     "colorImages": {
-      "Ivory": "assets/bag/wool-quarter-zip.png",
+      "Ivory": "assets/products/wool-quarter-zip.png",
       "Black": "",
       "Grey": ""
     },
@@ -40,10 +40,10 @@ const products = [
     "price": 75,
     "colors": ["Grey", "Black", "Ivory"],
     "sizes": ["XS", "S", "M", "L", "XL"],
-    "image": "assets/bag/fleece-sweater.png",
+    "image": "assets/products/fleece-sweater.png",
     "imageHeight": 152.156,
     "colorImages": {
-      "Grey": "assets/bag/fleece-sweater.png",
+      "Grey": "assets/products/fleece-sweater.png",
       "Black": "",
       "Ivory": ""
     },
@@ -55,10 +55,10 @@ const products = [
     "price": 55,
     "colors": ["Black", "Beige", "White"],
     "sizes": ["XS", "S", "M", "L", "XL"],
-    "image": "assets/bag/casual-mid-shorts.png",
+    "image": "assets/products/casual-mid-shorts.png",
     "imageHeight": 173.328,
     "colorImages": {
-      "Black": "assets/bag/casual-mid-shorts.png",
+      "Black": "assets/products/casual-mid-shorts.png",
       "Beige": "",
       "White": ""
     },

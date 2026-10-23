@@ -42,13 +42,6 @@ function createBagItem(product, selection) {
     image.src = imagePath;
   }
 
-  const removeIcon = card.querySelector('.remove-item img');
-  const showRemoveFallback = () => removeIcon.closest('button').classList.add('asset-missing');
-  removeIcon.addEventListener('error', showRemoveFallback);
-  if (removeIcon.complete && !removeIcon.naturalWidth) {
-    showRemoveFallback();
-  }
-  removeIcon.addEventListener('load', () => removeIcon.closest('button').classList.remove('asset-missing'));
   return card;
 }
 
