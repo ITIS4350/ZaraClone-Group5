@@ -2,7 +2,7 @@
 const bagItems = document.getElementById('bag-items');
 const checkoutButton = document.getElementById('continue-shipping');
 const bagStatus = document.getElementById('bag-status');
-const formatPrice = (amount) => '$' + amount.toLocaleString('en-US');
+const formatPrice = (amount) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
 
 const itemTemplate = document.getElementById('bag-item-template');
 
@@ -37,8 +37,9 @@ function createBagItem(product, selection) {
     image.hidden = true;
     placeholder.hidden = false;
   });
-  if (product.image) {
-    image.src = product.image;
+  const imagePath = getProductImage(product, selection.color);
+  if (imagePath) {
+    image.src = imagePath;
   }
 
   const removeIcon = card.querySelector('.remove-item img');
@@ -67,9 +68,10 @@ function renderBag() {
 function updateBag() {
   const cards = [...bagItems.querySelectorAll('.bag-item')];
   const count = cards.reduce((sum, card) => sum + Number(card.dataset.quantity), 0);
-  const subtotal = cards.reduce((sum, card) => sum + Number(card.dataset.price) * Number(card.dataset.quantity), 0);
-  // Rounded 8% reproduces the design's $39 estimate for the initial $489 bag.
-  const tax = Math.round(subtotal * 0.08);
+  const subtotalCents = cards.reduce((sum, card) => sum + Math.round(Number(card.dataset.price) * 100) * Number(card.dataset.quantity), 0);
+  const subtotal = subtotalCents / 100;
+  // Prototype estimate: calculate in cents so decimal product prices remain accurate.
+  const tax = Math.round(subtotalCents * 0.08) / 100;
   const total = subtotal + tax;
   document.querySelectorAll('[data-item-count]').forEach((element) => element.textContent = count);
   document.querySelectorAll('[data-subtotal]').forEach((element) => element.textContent = formatPrice(subtotal));

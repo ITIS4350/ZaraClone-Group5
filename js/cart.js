@@ -1,6 +1,7 @@
-// Shared cart API. Load products.js before this file on any shopping page.
+// Load products.js before this file on any shopping page.
 const Cart = (() => {
-  const storageKey = 'zara-cart-v1';
+  // now starts the shopping flow empty instead following the figma demo.
+  const storageKey = 'zara-cart-v2';
   let memoryItems = [];
   let storageAvailable = true;
 
@@ -46,10 +47,8 @@ const Cart = (() => {
     try {
       const saved = localStorage.getItem(storageKey);
       if (saved === null) {
-        // Keep the design's demo bag on the first visit only. [] stays empty.
-        save(products.map((product) => ({
-          productId: product.id, color: product.colors[0], size: product.sizes[0], quantity: 1
-        })));
+        // New visitors begin with an empty bag.
+        save([]);
       } else {
         try {
           memoryItems = normalize(JSON.parse(saved));

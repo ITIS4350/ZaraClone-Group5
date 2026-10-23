@@ -70,6 +70,7 @@
   .bag-layout { padding: 28px 24px 48px; grid-template-columns: minmax(0, 1fr) 280px; gap: 24px; }
   .order-summary { padding: 20px; }
 }
+
 @media (max-width: 767px) {
   .bag-layout { display: flex; flex-direction: column; padding: 24px 16px 40px; }
   .bag-products, .order-summary { width: 100%; }

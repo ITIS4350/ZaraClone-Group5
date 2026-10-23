@@ -4,7 +4,7 @@
   if (!placeholder) {
     return;
   }
-
+// copied from the header in the landing page hence the comments still being included
   const template = document.createElement('template');
   template.innerHTML = `
 <!-- Header / Navigation Bar -->
@@ -77,12 +77,12 @@
           </button>
         </div>
         <nav class="menu-navigation">
-          <a href="#" class="menu-link">New</a>
-          <a href="#" class="menu-link">Woman</a>
-          <a href="#" class="menu-link">Man</a>
-          <a href="#" class="menu-link">Kids</a>
-          <a href="#" class="menu-link">Beauty</a>
-          <a href="#" class="menu-link">Collections</a>
+          <a href="new_arrivals.html" class="menu-link">New</a>
+          <a href="women.html" class="menu-link">Woman</a>
+          <a href="women.html" class="menu-link">Man</a>
+          <a href="women.html" class="menu-link">Kids</a>
+          <a href="women.html" class="menu-link">Beauty</a>
+          <a href="new_arrivals.html" class="menu-link">Collections</a>
         </nav>
       </div>
 
