@@ -1,18 +1,3 @@
-// Preserve system theme detection and the page's manual toggle.
-const themeToggleBtn = document.getElementById('theme-toggle');
-const htmlElement = document.documentElement;
-htmlElement.classList.toggle('dark', window.matchMedia('(prefers-color-scheme: dark)').matches);
-
-function updateThemeToggle() {
-  themeToggleBtn?.setAttribute('aria-pressed', String(htmlElement.classList.contains('dark')));
-}
-updateThemeToggle();
-themeToggleBtn?.addEventListener('click', () => {
-  htmlElement.classList.toggle('dark');
-  updateThemeToggle();
-});
-
-
 const menuBtn = document.getElementById('menu-btn');
 const closeMenuBtn = document.getElementById('close-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
