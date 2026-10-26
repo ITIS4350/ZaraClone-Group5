@@ -4,6 +4,7 @@
   if (!placeholder) {
     return;
   }
+// change the data labels on the other links once those are implemented to make them active again, for now they are all set to false so that the active page is highlighted correctly
 // copied from the header in the landing page hence the comments still being included
   const template = document.createElement('template');
   template.innerHTML = `
@@ -79,10 +80,10 @@
         <nav class="menu-navigation">
           <a href="new_arrivals.html" class="menu-link">New</a>
           <a href="women.html" class="menu-link">Woman</a>
-          <a href="women.html" class="menu-link">Man</a>
-          <a href="women.html" class="menu-link">Kids</a>
-          <a href="women.html" class="menu-link">Beauty</a>
-          <a href="new_arrivals.html" class="menu-link">Collections</a>
+          <a href="women.html" class="menu-link" data-active="false">Man</a>
+          <a href="women.html" class="menu-link" data-active="false">Kids</a>
+          <a href="women.html" class="menu-link" data-active="false">Beauty</a>
+          <a href="new_arrivals.html" class="menu-link" data-active="false">Collections</a>
         </nav>
       </div>
 
@@ -98,7 +99,12 @@
   const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
   template.content.querySelectorAll('a[href]').forEach((link) => {
     const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || href.startsWith('mailto:')) {
+    if (
+      link.dataset.active === 'false' ||
+      !href ||
+      href.startsWith('#') ||
+      href.startsWith('mailto:')
+    ) {
       return;
     }
 
