@@ -10,6 +10,7 @@
   align-items: start;
   gap: 32px;
 }
+
 .bag-products { min-width: 0; }
 .bag-heading { min-height: 63px; display: flex; justify-content: space-between; align-items: end; gap: 16px; }
 .bag-eyebrow { color: var(--muted-color); font-size: 11px; font-weight: 600; line-height: 16.5px; letter-spacing: 1.2px; text-transform: uppercase; }

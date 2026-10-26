@@ -28,6 +28,7 @@
 .collection-status { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 60; max-width: calc(100% - 32px); padding: 12px 20px; border: 1px solid var(--border-color); background: var(--background-color); box-shadow: 0 4px 20px rgb(0 0 0 / 0.12); font-size: 13px; }
 .collection-status:empty { display: none; }
 
+
 /* Variant picker for the grid's Add to Bag buttons. */
 .quick-add { margin: auto; width: min(440px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 32px; border: 1px solid var(--border-color); color: var(--text-color); background: var(--background-color); overflow-y: auto; }
 .quick-add::backdrop { background: rgb(0 0 0 / 0.5); }

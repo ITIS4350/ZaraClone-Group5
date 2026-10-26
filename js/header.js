@@ -95,9 +95,16 @@
   </div>
   `;
 
-  const currentPage = window.location.pathname.split('/').pop() || 'zara_landing_page.html';
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
   template.content.querySelectorAll('a[href]').forEach((link) => {
-    if (link.getAttribute('href') === currentPage) {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:')) {
+      return;
+    }
+
+    const linkUrl = new URL(href, window.location.href);
+    const linkPath = linkUrl.pathname.replace(/\/+$/, '') || '/';
+    if (linkUrl.origin === window.location.origin && linkPath === currentPath) {
       link.setAttribute('aria-current', 'page');
     }
   });
