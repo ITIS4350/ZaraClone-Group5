@@ -97,6 +97,7 @@ body.menu-open { overflow: hidden; }
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
+.zara-logo[aria-current="page"] { text-decoration: none; }
 
 .mobile-action { font-size: 18px; line-height: 28px; }
 .theme-toggle {
