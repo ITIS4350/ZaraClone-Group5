@@ -5,4 +5,6 @@
 - Josue Barrera-Mejia
 - Iris Muller
 - Caleb Mason
-This is sophia editing the file so I can figure out how this works.
+
+
+**To run the code just open zara_landing_page**
