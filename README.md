@@ -7,4 +7,4 @@
 - Caleb Mason
 
 
-**To run the code just open zara_landing_page**
+**To run the code just unzip and open zara_landing_page**
