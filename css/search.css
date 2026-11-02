@@ -1,0 +1,86 @@
+/* Shared by the main header and the existing Help headers. */
+.product-search-field {
+  position: relative;
+  width: 100%;
+}
+
+.product-search-results[hidden] {
+  display: none;
+}
+
+.product-search-results {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  max-height: min(360px, 60vh);
+  overflow-y: auto;
+  border: 1px solid var(--muted-color);
+  background: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
+  z-index: 1;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.product-search-status {
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--muted-color);
+}
+
+.product-search-results ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-search-results a {
+  display: block;
+  padding: 12px 14px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.product-search-results a:hover,
+.product-search-results a:focus-visible {
+  background: var(--surface-color);
+  text-decoration: underline;
+  outline-offset: -3px;
+}
+
+@media (max-width: 767px) {
+  .product-search-panel.search-is-open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-width: none;
+    margin: 0;
+    padding: 16px;
+    background: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .product-search-panel .search-input {
+    font-size: 16px;
+  }
+}
+
+/* Help's existing mobile header includes 768px. */
+@media (width: 768px) {
+  .header-center.product-search-panel.search-is-open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-width: none;
+    margin: 0;
+    padding: 16px;
+    background: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+}

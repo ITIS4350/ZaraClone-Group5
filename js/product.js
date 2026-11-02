@@ -127,11 +127,6 @@
     event.preventDefault();
     const selection = { productId: product.id, color, size: new FormData(form).get('size'), quantity: 1 };
     const existing = Cart.getItems().find(item => Cart.key(item) === Cart.key(selection));
-    // max is three. 
-    if (existing?.quantity >= 3) {
-      message.textContent = 'This item has reached the maximum quantity of 3 in your bag.';
-      return;
-    }
     Cart.addItem(selection);
     message.textContent = Cart.storageAvailable
       ? product.name + ' added to your bag (' + color + ', ' + selection.size + ').'
