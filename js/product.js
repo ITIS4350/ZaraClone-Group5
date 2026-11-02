@@ -12,8 +12,6 @@
   const photo = document.getElementById('product-photo');
   const thumbnails = document.getElementById('product-thumbnails');
   const form = document.getElementById('product-form');
-  const message = document.getElementById('product-message');
-  const bagLink = document.getElementById('product-bag-link');
   const swatches = {
     'Mid Blue': '#4c6b88', Black: '#202020', White: '#ffffff', Ivory: '#f0ede3',
     Grey: '#888888', Beige: '#cbb999', 'Forest Green': '#414f40', 'Optic White': '#fafafa',
@@ -114,8 +112,6 @@
   });
 
   form.addEventListener('change', event => {
-    message.textContent = '';
-    bagLink.hidden = true;
     if (event.target.name === 'color') {
       color = event.target.value;
       document.getElementById('selected-color').textContent = color;
@@ -126,12 +122,7 @@
   form.addEventListener('submit', event => {
     event.preventDefault();
     const selection = { productId: product.id, color, size: new FormData(form).get('size'), quantity: 1 };
-    const existing = Cart.getItems().find(item => Cart.key(item) === Cart.key(selection));
-    Cart.addItem(selection);
-    message.textContent = Cart.storageAvailable
-      ? product.name + ' added to your bag (' + color + ', ' + selection.size + ').'
-      : 'Your browser could not save the bag. Allow site storage before continuing.';
-    bagLink.hidden = !Cart.storageAvailable;
+    BagFeedback.add(product, selection, form.querySelector('[type="submit"]'));
   });
   // the recommended products are just the first 8 products that are not the current product.
   products.filter(item => item.id !== product.id).slice(0, 8).forEach(item => {
