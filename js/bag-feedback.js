@@ -1,4 +1,4 @@
-// Shared loading and confirmation popup for both Add to Bag flows.
+// loading for adding to bag doesnt do anything just a fake loading screen 
 const BagFeedback = (() => {
   const dialog = document.createElement('dialog');
   dialog.className = 'bag-feedback';
@@ -16,6 +16,7 @@ const BagFeedback = (() => {
       <button type="button">Continue shopping</button>
     </div>`;
   document.body.append(dialog);
+  //Caches child DOM elements for later use to avoid repeated DOM queries
   const title = dialog.querySelector('h2');
   const item = dialog.querySelector('#bag-feedback-item');
   const spinner = dialog.querySelector('.bag-feedback-spinner');
@@ -25,13 +26,14 @@ const BagFeedback = (() => {
   let opener;
   let submit;
 
+  // will re-enable the submit button and remove the aria-busy attribute after the fake loading is done
   function releaseButton() {
     submit.disabled = false;
     submit.removeAttribute('aria-busy');
   }
 
   function close() {
-    // Closing during the simulated delay cancels the pending addition.
+    // prevents the dialog from closing if the user clicks the "Continue shopping" button while the fake loading is still happening
     clearTimeout(timer);
     releaseButton();
     dialog.close();
@@ -60,7 +62,7 @@ const BagFeedback = (() => {
     dialog.showModal();
     title.focus();
 
-    // Prototype only: simulate a short request because there is no backend.
+    // purley simulated since theres nothing actually occuring in the backround 
     timer = setTimeout(() => {
       try {
         Cart.addItem(selection);
