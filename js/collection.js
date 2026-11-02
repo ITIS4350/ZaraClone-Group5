@@ -21,9 +21,9 @@
     card.dataset.product = product.id;
     const photo = card.querySelector('.catalog-photo');
     const name = card.querySelector('.catalog-name');
-    // Product details will be built next. For now product links lead to Women's clothing.
-    photo.href = name.href = 'women.html#product-' + product.id;
-    photo.setAttribute('aria-label', 'View ' + product.name + ' in women\'s clothing');
+    // Both collection pages open the same reusable product page.
+    photo.href = name.href = 'product.html?id=' + encodeURIComponent(product.id);
+    photo.setAttribute('aria-label', 'View ' + product.name + ' details');
     name.textContent = product.name;
     card.querySelector('.catalog-color').textContent = product.colors[0];
     card.querySelector('.catalog-price').textContent = price.format(product.price);

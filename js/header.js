@@ -96,6 +96,7 @@
   </div>
   `;
 
+  // active link, it bascially overrights the data-active="false" on the other links and makes the current page link active by inseserting active into the html
   const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
   template.content.querySelectorAll('a[href]').forEach((link) => {
     const href = link.getAttribute('href');

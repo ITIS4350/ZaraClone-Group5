@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product | ZARA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+  <div id="site-header-placeholder"></div>
+  <main class="product-page">
+    <section id="product-missing" hidden>
+      <h1>Product not found</h1>
+      <p>Please choose a product from our collection.</p>
+      <a href="women.html">Browse women's clothing</a>
+    </section>
+    <article id="product-content" class="product-layout" aria-labelledby="product-title" hidden>
+      <div class="product-gallery">
+        <div id="product-thumbnails" class="product-thumbnails" aria-label="Additional product photos"></div>
+        <div id="product-photo" class="product-photo"></div>
+      </div>
+      <section class="product-information">
+        <h1 id="product-title"></h1>
+        <p id="product-price" class="product-price"></p>
+        <p id="product-description" class="product-description"></p>
+        <form id="product-form">
+          <fieldset>
+            <legend>Color: <span id="selected-color"></span></legend>
+            <div id="product-colors" class="product-options"></div>
+          </fieldset>
+          <fieldset class="product-sizes">
+            <legend>Size</legend>
+            <div id="product-sizes" class="product-options"></div>
+          </fieldset>
+          <button class="product-add" type="submit">Add to Bag</button>
+          <p id="product-message" class="product-message" role="status"></p>
+          <a id="product-bag-link" href="bag_page.html" hidden>View Bag</a>
+        </form>
+        <details class="product-details">
+          <summary>Details</summary>
+          <dl id="product-details"></dl>
+        </details>
+      </section>
+    </article>
+    <section id="product-recommendations" class="product-recommendations" aria-labelledby="recommendations-title" hidden>
+      <h2 id="recommendations-title">You May Also Like</h2>
+      <div id="recommended-products" class="recommended-products"></div>
+    </section>
+    <noscript><p>Enable JavaScript to view product details.</p></noscript>
+  </main>
+  <script src="js/header.js"></script>
+  <script src="js/Interactivity.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

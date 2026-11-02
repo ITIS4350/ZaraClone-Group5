@@ -1,10 +1,21 @@
-// Shared catalog. Sizes and extra colors are prototype options, not live inventory.
-// Add image paths to colorImages as photos become available; blank paths show a placeholder.
-// Paths are relative to the root HTML pages. Some Figma cards reuse the same source photo.
+// need to add additional images in the future for now its fine to just have the main image for each product
 const products = [
   {
     "id": "wide-legged-jeans",
     "name": "Wide Leg Blue Jeans",
+    "description": "Wide-leg blue jeans with an easy, relaxed silhouette.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/wide-legged-jeans-side.png",
+      // "assets/products/wide-legged-jeans-back.png",
+      // "assets/products/wide-legged-jeans-detail.png",
+      // "assets/products/wide-legged-jeans-alternate.png"
+    ],
     "price": 89,
     "colors": ["Mid Blue", "Black", "White"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -22,6 +33,19 @@ const products = [
   {
     "id": "wool-quarter-zip",
     "name": "Wool Quarter Zip",
+    "description": "A simple quarter-zip sweater for everyday layering.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/wool-quarter-zip-side.png",
+      // "assets/products/wool-quarter-zip-back.png",
+      // "assets/products/wool-quarter-zip-detail.png",
+      // "assets/products/wool-quarter-zip-alternate.png"
+    ],
     "price": 120,
     "colors": ["Ivory", "Black", "Grey"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -37,6 +61,19 @@ const products = [
   {
     "id": "fleece-sweater",
     "name": "Fleece Sweater",
+    "description": "A casual fleece sweater for comfortable everyday outfits.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/fleece-sweater-side.png",
+      // "assets/products/fleece-sweater-back.png",
+      // "assets/products/fleece-sweater-detail.png",
+      // "assets/products/fleece-sweater-alternate.png"
+    ],
     "price": 75,
     "colors": ["Grey", "Black", "Ivory"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -52,6 +89,19 @@ const products = [
   {
     "id": "casual-mid-shorts",
     "name": "Casual Mid-shorts",
+    "description": "Mid-length shorts with a simple, casual look.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/casual-mid-shorts-side.png",
+      // "assets/products/casual-mid-shorts-back.png",
+      // "assets/products/casual-mid-shorts-detail.png",
+      // "assets/products/casual-mid-shorts-alternate.png"
+    ],
     "price": 55,
     "colors": ["Black", "Beige", "White"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -67,6 +117,19 @@ const products = [
   {
     "id": "wide-leg-capri",
     "name": "Forest Green Slacks",
+    "description": "Forest green slacks with a clean, relaxed silhouette.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/wide-leg-capri-side.png",
+      // "assets/products/wide-leg-capri-back.png",
+      // "assets/products/wide-leg-capri-detail.png",
+      // "assets/products/wide-leg-capri-alternate.png"
+    ],
     "price": 68,
     "colors": ["Forest Green", "Black", "Ivory"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -84,6 +147,19 @@ const products = [
   {
     "id": "skinny-jeans",
     "name": "White Straight-Leg Slacks",
+    "description": "White slacks with a straight-leg silhouette.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/skinny-jeans-side.png",
+      // "assets/products/skinny-jeans-back.png",
+      // "assets/products/skinny-jeans-detail.png",
+      // "assets/products/skinny-jeans-alternate.png"
+    ],
     "price": 72,
     "colors": ["Optic White", "Black", "Beige"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -101,6 +177,19 @@ const products = [
   {
     "id": "crimson-red-jeans",
     "name": "Crimson Red Jeans",
+    "description": "Crimson red jeans that bring color to everyday outfits.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/crimson-red-jeans-side.png",
+      // "assets/products/crimson-red-jeans-back.png",
+      // "assets/products/crimson-red-jeans-detail.png",
+      // "assets/products/crimson-red-jeans-alternate.png"
+    ],
     "price": 69,
     "colors": ["Crimson", "Black", "White"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -118,6 +207,19 @@ const products = [
   {
     "id": "black-skinny-jeans",
     "name": "Black Skinny Jeans",
+    "description": "Black jeans with a slim, skinny silhouette.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/black-skinny-jeans-side.png",
+      // "assets/products/black-skinny-jeans-back.png",
+      // "assets/products/black-skinny-jeans-detail.png",
+      // "assets/products/black-skinny-jeans-alternate.png"
+    ],
     "price": 55,
     "colors": ["Washed Black", "Blue", "White"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -135,6 +237,19 @@ const products = [
   {
     "id": "weathered-wide-leg-jeans",
     "name": "Weathered Wide-Leg Jeans",
+    "description": "Wide-leg jeans with a weathered blue look.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/weathered-wide-leg-jeans-side.png",
+      // "assets/products/weathered-wide-leg-jeans-back.png",
+      // "assets/products/weathered-wide-leg-jeans-detail.png",
+      // "assets/products/weathered-wide-leg-jeans-alternate.png"
+    ],
     "price": 89.9,
     "colors": ["Vintage Blue", "Black", "Light Blue"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -152,6 +267,19 @@ const products = [
   {
     "id": "olive-cropped-trousers",
     "name": "Olive Cropped Trousers",
+    "description": "Olive trousers with a cropped silhouette.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/olive-cropped-trousers-side.png",
+      // "assets/products/olive-cropped-trousers-back.png",
+      // "assets/products/olive-cropped-trousers-detail.png",
+      // "assets/products/olive-cropped-trousers-alternate.png"
+    ],
     "price": 68,
     "colors": ["Deep Olive", "Black", "Beige"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -169,6 +297,19 @@ const products = [
   {
     "id": "red-slim-fit-jeans",
     "name": "Red Slim-Fit Jeans",
+    "description": "Red jeans with a slim-fit silhouette.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/red-slim-fit-jeans-side.png",
+      // "assets/products/red-slim-fit-jeans-back.png",
+      // "assets/products/red-slim-fit-jeans-detail.png",
+      // "assets/products/red-slim-fit-jeans-alternate.png"
+    ],
     "price": 69,
     "colors": ["Ruby Red", "Black", "Blue"],
     "sizes": ["XS", "S", "M", "L", "XL"],
@@ -186,6 +327,19 @@ const products = [
   {
     "id": "relaxed-blue-jeans",
     "name": "Relaxed Blue Jeans",
+    "description": "Blue jeans with a relaxed everyday silhouette.",
+    "details": [
+      {
+        "heading": "Product information",
+        "text": "Additional product details coming soon."
+      }
+    ],
+    "thumbnails": [
+      // "assets/products/relaxed-blue-jeans-side.png",
+      // "assets/products/relaxed-blue-jeans-back.png",
+      // "assets/products/relaxed-blue-jeans-detail.png",
+      // "assets/products/relaxed-blue-jeans-alternate.png"
+    ],
     "price": 89,
     "colors": ["Classic Blue", "Black", "White"],
     "sizes": ["XS", "S", "M", "L", "XL"],
