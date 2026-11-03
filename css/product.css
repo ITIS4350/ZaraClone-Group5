@@ -136,6 +136,13 @@
   font-size: 20px;
 }
 
+#product-sizes .product-option:hover { background-color:rgba(188, 188, 188, 0.5); }
+
+.product-option input:checked+span {
+  border: 2px solid var(--text-color);
+  background-color:rgba(188, 188, 188, 0.5);
+}
+
 .product-option input:checked+span {
   border: 2px solid var(--text-color);
 }
