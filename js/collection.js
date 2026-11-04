@@ -7,13 +7,10 @@
   const form = document.getElementById('quick-add-form');
   const colorSelect = document.getElementById('quick-add-color');
   const sizeSelect = document.getElementById('quick-add-size');
-  const message = document.getElementById('quick-add-message');
-  const status = document.getElementById('collection-status');
   const price = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
   const collection = products.filter(product => product.collections?.includes(document.body.dataset.collection));
   let selectedProduct = null;
   let opener = null;
-  let statusTimer;
 
   function createCard(product) {
     const card = template.content.firstElementChild.cloneNode(true);
@@ -21,9 +18,9 @@
     card.dataset.product = product.id;
     const photo = card.querySelector('.catalog-photo');
     const name = card.querySelector('.catalog-name');
-    // Product details will be built next. For now product links lead to Women's clothing.
-    photo.href = name.href = 'women.html#product-' + product.id;
-    photo.setAttribute('aria-label', 'View ' + product.name + ' in women\'s clothing');
+    // Both collection pages open the same reusable product page.
+    photo.href = name.href = 'product.html?id=' + encodeURIComponent(product.id);
+    photo.setAttribute('aria-label', 'View ' + product.name + ' details');
     name.textContent = product.name;
     card.querySelector('.catalog-color').textContent = product.colors[0];
     card.querySelector('.catalog-price').textContent = price.format(product.price);
@@ -85,7 +82,6 @@
     document.getElementById('quick-add-price').textContent = price.format(product.price);
     fillOptions(colorSelect, product.colors);
     fillOptions(sizeSelect, product.sizes, 'Select a size');
-    message.textContent = '';
     dialog.showModal();
     sizeSelect.focus();
   }
@@ -96,23 +92,15 @@
       return;
     }
     const selection = { productId: selectedProduct.id, color: colorSelect.value, size: sizeSelect.value, quantity: 1 };
-    const existing = Cart.getItems().find(item => Cart.key(item) === Cart.key(selection));
-    if (existing?.quantity >= 99) {
-      message.textContent = 'This item has reached the maximum quantity of 99 in your bag.';
-      return;
-    }
-    Cart.addItem(selection);
-    if (!Cart.storageAvailable) {
-      message.textContent = 'Your browser could not save the bag. Allow site storage before continuing.';
-      return;
-    }
     dialog.close();
-    status.textContent = selectedProduct.name + ' added to your bag (' + selection.color + ', ' + selection.size + ').';
-    clearTimeout(statusTimer);
-    statusTimer = setTimeout(() => { status.textContent = ''; }, 5000);
+    BagFeedback.add(selectedProduct, selection, form.querySelector('[type="submit"]'), opener);
   });
   dialog.querySelector('.quick-add-close').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('close', () => opener?.focus());
+  dialog.addEventListener('close', () => {
+    if (!BagFeedback.open) {
+      opener?.focus();
+    }
+  });
   dialog.addEventListener('click', event => {
     const bounds = dialog.getBoundingClientRect();
     if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) {

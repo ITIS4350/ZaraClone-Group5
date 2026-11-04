@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/account.css">
   
+  <link rel="stylesheet" href="../css/search.css">
 </head>
 <body>
 
@@ -58,24 +59,25 @@
   <div id="mobile-menu" class="mobile-menu-overlay">
     <div class="mobile-menu-drawer">
       <div>
-        <div class="drawer-header">
-          <span class="zara-logo" style="font-size: 28px;">ZARA</span>
-          <button id="close-menu-btn" style="font-size: 20px;">
+        <div class="menu-heading">
+          <span class="zara-logo drawer-logo">ZARA</span>
+          <button id="close-menu-btn" class="menu-close" aria-label="Close menu">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
-        <nav class="drawer-nav">
-          <a href="#">New Arrivals</a>
-          <a href="#">Woman</a>
-          <a href="#">Man</a>
-          <a href="#">Kids</a>
-          <a href="#">Help Center</a>
+        <nav class="menu-navigation">
+          <a href="../new_arrivals.html" class="menu-link">New</a>
+          <a href="../women.html" class="menu-link">Woman</a>
+          <a href="../women.html" class="menu-link" data-active="false">Man</a>
+          <a href="../women.html" class="menu-link" data-active="false">Kids</a>
+          <a href="../women.html" class="menu-link" data-active="false">Beauty</a>
+          <a href="../new_arrivals.html" class="menu-link" data-active="false">Collections</a>
         </nav>
       </div>
 
-      <div class="drawer-footer">
+      <div class="menu-footer">
         <a href="#">Settings</a>
-        <a href="index.html" style="font-weight: bold;">Help & Support</a>
+        <a href="index.html">Help &amp; Support</a>
         <a href="../bag_page.html">Shopping Bag</a>
       </div>
     </div>
@@ -144,5 +146,7 @@
   <script src="../js/theme.js"></script>
   <script src="../js/help.js"></script>
 
+  <script src="../js/products.js"></script>
+  <script src="../js/search.js"></script>
 </body>
 </html>

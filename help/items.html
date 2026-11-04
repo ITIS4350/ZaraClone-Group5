@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZARA Official Website</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/account.css">
+  
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-left">
+      <button id="menu-btn" class="menu-btn" aria-label="Open Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <a href="../zara_landing_page.html" class="zara-logo">ZARA</a>
+    </div>
+
+    <!-- Centered Underlined Search Bar (Desktop) -->
+    <div class="header-center">
+      <div class="search-container">
+        <input type="text" placeholder="Search" class="search-input" />
+      </div>
+    </div>
+
+    <!-- Navigation Items & Dark Mode Switcher -->
+    <div class="header-right">
+      <nav class="nav-links desktop-only">
+        <a href="#">Settings</a>
+        <a href="index.html" class="active">Help</a>
+        <a href="../bag_page.html">Bag</a>
+      </nav>
+
+      <!-- Mobile Icons -->
+      <button class="mobile-only" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <a href="../bag_page.html" class="mobile-only" aria-label="Shopping Bag">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </a>
+
+      <!-- Dark Mode Toggle Switch -->
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+        <span class="toggle-thumb">
+          <i id="theme-icon" class="fa-regular fa-moon"></i>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="mobile-menu-overlay">
+    <div class="mobile-menu-drawer">
+      <div>
+        <div class="menu-heading">
+          <span class="zara-logo drawer-logo">ZARA</span>
+          <button id="close-menu-btn" class="menu-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="menu-navigation">
+          <a href="../new_arrivals.html" class="menu-link">New</a>
+          <a href="../women.html" class="menu-link">Woman</a>
+          <a href="../women.html" class="menu-link" data-active="false">Man</a>
+          <a href="../women.html" class="menu-link" data-active="false">Kids</a>
+          <a href="../women.html" class="menu-link" data-active="false">Beauty</a>
+          <a href="../new_arrivals.html" class="menu-link" data-active="false">Collections</a>
+        </nav>
+      </div>
+
+      <div class="menu-footer">
+        <a href="#">Settings</a>
+        <a href="index.html">Help &amp; Support</a>
+        <a href="../bag_page.html">Shopping Bag</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Topic Section -->
+  <section class="hero-topic">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <a href="index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Help Center</span>
+      </a>
+      <h1 class="hero-title">Items & Sizes</h1>
+    </div>
+  </section>
+
+  <!-- Content & FAQ Cards Section -->
+  <section class="section-container">
+    <h2 class="section-subtitle">Find answers about your account and profile.</h2>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-header">
+          <span>How can I change my username</span>
+          <span class="chevron">V</span>
+        </button>
+        <div class="faq-body">
+          You can update your display name and username directly in your account settings under the "Personal Details" section.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header">
+          <span>Can I change my email</span>
+          <span class="chevron">V</span>
+        </button>
+        <div class="faq-body">
+          Yes, you can edit your email address in account settings. You will receive a verification code sent to your new email address to confirm the change.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header">
+          <span>How to delete my account</span>
+          <span class="chevron">V</span>
+        </button>
+        <div class="faq-body">
+          To delete your account, navigate to Account Settings &gt; Security & Privacy &gt; Delete Account. Please note this action is permanent and will remove all saved order history and rewards.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header">
+          <span>How to reset my password</span>
+          <span class="chevron">V</span>
+        </button>
+        <div class="faq-body">
+          Click "Forgot Password" on the login screen. We will send a password reset link to the email registered with your profile.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive JavaScript Logic -->
+  <script src="../js/theme.js"></script>
+  <script src="../js/help.js"></script>
+
+</body>
+</html>

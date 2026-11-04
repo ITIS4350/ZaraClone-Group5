@@ -23,6 +23,7 @@ if (mobileMenu) {
       setMenuOpen(false);
     }
   });
+  // for accessibility, just forces focus onto the navigation drawer when open. 
   document.addEventListener('keydown', (event) => {
     if (!mobileMenu.classList.contains('is-open')) {
       return;
