@@ -112,7 +112,6 @@ bagItems.addEventListener('click', (event) => {
   const card = button.closest('.bag-item');
   const selection = selectionFromCard(card);
   const name = card.querySelector('h2').textContent;
-  document.getElementById('checkout-notice').hidden = true;
   if (button.dataset.action === 'remove') {
     const nextCard = card.nextElementSibling || card.previousElementSibling;
     const nextSelection = nextCard ? selectionFromCard(nextCard) : selection;
@@ -128,7 +127,7 @@ bagItems.addEventListener('click', (event) => {
   }
 });
 checkoutButton.addEventListener('click', () => {
-  document.getElementById('checkout-notice').hidden = false;
+  window.location.href = 'checkout.html';
 });
 window.addEventListener('cartchange', () => {
   // Keep keyboard focus when a change arrives from another tab or page code.

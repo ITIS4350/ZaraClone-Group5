@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | ZARA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+  <div id="site-header-placeholder"></div>
+  <main class="checkout-layout">
+    <a class="back-to-bag" href="bag_page.html">&larr; Back to bag</a>
+    <h1>Checkout</h1>
+    <p id="empty-checkout" hidden>Your bag is empty. <a href="women.html">Continue shopping</a></p>
+    <div id="checkout-content" class="checkout-columns" hidden>
+      <div class="checkout-sections">
+        <section aria-labelledby="shipping-title">
+          <h2 id="shipping-title">Shipping Address</h2>
+          <!-- Basic inputs for now; detailed form behavior will be added later. -->
+          <div class="checkout-fields">
+            <label>Full name<input name="full-name" autocomplete="shipping name" placeholder="Full name"></label>
+            <label>Address<input name="address" autocomplete="shipping street-address" placeholder="Address"></label>
+            <label>City<input name="city" autocomplete="shipping address-level2" placeholder="City"></label>
+            <div class="field-pair">
+              <label>State<input name="state" autocomplete="shipping address-level1" placeholder="State"></label>
+              <label>Zip code<input name="zip" autocomplete="shipping postal-code" placeholder="Zip code"></label>
+            </div>
+          </div>
+        </section>
+        <fieldset>
+          <legend>Shipping Method</legend>
+          <label class="checkout-choice"><input type="radio" name="shipping" value="standard" checked><span>Standard Shipping</span><strong id="standard-price">$5.95</strong></label>
+          <label class="checkout-choice"><input type="radio" name="shipping" value="express"><span>Express Shipping</span><strong>$10.00</strong></label>
+          <p class="checkout-hint">Free standard shipping on orders over $150.</p>
+        </fieldset>
+        <section aria-labelledby="payment-title">
+          <h2 id="payment-title">Payment</h2>
+          <p class="checkout-hint">Choose a payment method and enter your details.</p>
+          <fieldset class="payment-methods">
+            <legend class="visually-hidden">Payment method</legend>
+            <label class="checkout-choice"><input type="radio" name="payment" value="card" checked><span>Credit or debit card</span><span class="payment-wordmark">VISA · AMEX</span></label>
+            <label class="checkout-choice"><input type="radio" name="payment" value="paypal"><span>PayPal</span><span class="payment-wordmark">PayPal</span></label>
+            <label class="checkout-choice"><input type="radio" name="payment" value="apple"><span>Apple Pay</span><span class="payment-wordmark">● Pay</span></label>
+          </fieldset>
+          <div id="card-details" class="checkout-fields">
+            <h3>Card details</h3>
+            <label>Name on card<input name="card-name" autocomplete="off" placeholder="Full name"></label>
+            <label>Card number<input name="card-number" inputmode="numeric" autocomplete="off" placeholder="1234 5678 9012 3456"></label>
+            <div class="field-pair">
+              <label>Expiration date<input name="expiration" autocomplete="off" placeholder="MM / YY"></label>
+              <label>Security code<input name="security-code" inputmode="numeric" autocomplete="off" placeholder="CVC"></label>
+            </div>
+          </div>
+        </section>
+      </div>
+      <aside class="checkout-summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Order Summary</h2>
+        <div id="checkout-items" class="checkout-items"></div>
+        <a class="edit-bag" href="bag_page.html">Edit bag</a>
+        <dl class="checkout-totals" aria-live="polite">
+          <div><dt>Subtotal (<span id="checkout-count">0</span> items)</dt><dd id="checkout-subtotal">$0.00</dd></div>
+          <div><dt>Shipping</dt><dd id="checkout-shipping">$0.00</dd></div>
+          <div><dt>Est. tax</dt><dd id="checkout-tax">$0.00</dd></div>
+          <div class="checkout-total"><dt>Total</dt><dd id="checkout-total">$0.00</dd></div>
+        </dl>
+        <button id="confirm-purchase" class="purchase-button" type="button"><span id="purchase-spinner" class="checkout-spinner" aria-hidden="true" hidden></span><span id="purchase-label">Confirm Purchase</span></button>
+        <p id="purchase-status" role="status" aria-live="polite"></p>
+      </aside>
+    </div>
+    <noscript>Please enable JavaScript to check out.</noscript>
+  </main>
+  <dialog id="purchase-success" class="purchase-success" aria-labelledby="success-title" aria-describedby="success-message">
+    <button id="close-success" class="success-close" type="button" aria-label="Close confirmation">&times;</button>
+    <img class="success-icon" src="assets/checkout/party-popper.svg" alt="" width="89" height="86">
+    <h2 id="success-title">Success!</h2>
+    <p id="success-message">Your order #: <span id="order-number"></span> is confirmed. We’ve sent a receipt to your email.</p>
+    <div class="success-actions"><a href="zara_landing_page.html">Back Home</a><a href="women.html">Continue Shopping</a></div>
+  </dialog>
+  <script src="js/header.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/Interactivity.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
