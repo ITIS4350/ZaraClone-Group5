@@ -23,7 +23,8 @@
         <p class="bag-subtotal">Subtotal <strong data-subtotal>$0</strong></p>
       </div>
       <div class="bag-items" id="bag-items"></div>
-      <noscript><p>Please enable JavaScript to view your bag.</p></noscript>
+      <!-- just in case -->
+      <noscript><p>Please enable JavaScript.</p></noscript>
       <!-- bag.js fills it using products.js. -->
       <template id="bag-item-template">
         <article class="bag-item">
@@ -67,6 +68,7 @@
     </aside>    
     <p id="cart-storage-notice" class="checkout-notice" role="status" hidden>Cart storage is unavailable. Changes will last only while this page is open.</p>
     <p id="bag-status" class="visually-hidden" role="status" aria-live="polite"></p>
+  <!-- this is getting a bit long -->
   </main>
   <script src="js/header.js"></script>
   <script src="js/theme.js"></script>

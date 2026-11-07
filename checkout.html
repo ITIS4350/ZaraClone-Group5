@@ -15,18 +15,20 @@
     <a class="back-to-bag" href="bag_page.html">&larr; Back to bag</a>
     <h1>Checkout</h1>
     <p id="empty-checkout" hidden>Your bag is empty. <a href="women.html">Continue shopping</a></p>
-    <div id="checkout-content" class="checkout-columns" hidden>
+    <form id="checkout-content" class="checkout-columns" novalidate hidden>
       <div class="checkout-sections">
         <section aria-labelledby="shipping-title">
           <h2 id="shipping-title">Shipping Address</h2>
-          <!-- Basic inputs for now; detailed form behavior will be added later. -->
+          <p class="checkout-hint">* Required fields</p>
+          <!-- Each field has inline validation feedback. -->
+           <!-- nonvalidate is used to prevent the browser's default validation from popping up here. --> 
           <div class="checkout-fields">
-            <label>Full name<input name="full-name" autocomplete="shipping name" placeholder="Full name"></label>
-            <label>Address<input name="address" autocomplete="shipping street-address" placeholder="Address"></label>
-            <label>City<input name="city" autocomplete="shipping address-level2" placeholder="City"></label>
+            <label>Full name *<input id="full-name" name="full-name" autocomplete="shipping name" placeholder="Full name" required aria-describedby="full-name-message"><small id="full-name-message" class="field-message" aria-live="polite"></small></label>
+            <label>Address *<input id="address" name="address" autocomplete="shipping street-address" placeholder="Address" required aria-describedby="address-message"><small id="address-message" class="field-message" aria-live="polite"></small></label>
+            <label>City *<input id="city" name="city" autocomplete="shipping address-level2" placeholder="City" required aria-describedby="city-message"><small id="city-message" class="field-message" aria-live="polite"></small></label>
             <div class="field-pair">
-              <label>State<input name="state" autocomplete="shipping address-level1" placeholder="State"></label>
-              <label>Zip code<input name="zip" autocomplete="shipping postal-code" placeholder="Zip code"></label>
+              <label>State *<input id="state" name="state" autocomplete="shipping address-level1" placeholder="State" required aria-describedby="state-message"><small id="state-message" class="field-message" aria-live="polite"></small></label>
+              <label>Zip code *<input id="zip" name="zip" autocomplete="shipping postal-code" placeholder="Zip code" inputmode="numeric" required aria-describedby="zip-message"><small id="zip-message" class="field-message" aria-live="polite"></small></label>
             </div>
           </div>
         </section>
@@ -41,17 +43,17 @@
           <p class="checkout-hint">Choose a payment method and enter your details.</p>
           <fieldset class="payment-methods">
             <legend class="visually-hidden">Payment method</legend>
-            <label class="checkout-choice"><input type="radio" name="payment" value="card" checked><span>Credit or debit card</span><span class="payment-wordmark">VISA · AMEX</span></label>
+            <label class="checkout-choice"><input type="radio" name="payment" value="card" checked><span>Credit or debit card</span><span class="payment-wordmark">VISA</span></label>
             <label class="checkout-choice"><input type="radio" name="payment" value="paypal"><span>PayPal</span><span class="payment-wordmark">PayPal</span></label>
-            <label class="checkout-choice"><input type="radio" name="payment" value="apple"><span>Apple Pay</span><span class="payment-wordmark">● Pay</span></label>
+            <label class="checkout-choice"><input type="radio" name="payment" value="apple"><span>Apple Pay</span><span class="payment-wordmark">Apple Pay</span></label>
           </fieldset>
           <div id="card-details" class="checkout-fields">
             <h3>Card details</h3>
-            <label>Name on card<input name="card-name" autocomplete="off" placeholder="Full name"></label>
-            <label>Card number<input name="card-number" inputmode="numeric" autocomplete="off" placeholder="1234 5678 9012 3456"></label>
+            <label>Name on card *<input id="card-name" name="card-name" autocomplete="off" placeholder="Full name" required aria-describedby="card-name-message"><small id="card-name-message" class="field-message" aria-live="polite"></small></label>
+            <label>Card number *<input id="card-number" name="card-number" inputmode="numeric" autocomplete="off" placeholder="1234 5678 9012 3456" required aria-describedby="card-number-message"><small id="card-number-message" class="field-message" aria-live="polite"></small></label>
             <div class="field-pair">
-              <label>Expiration date<input name="expiration" autocomplete="off" placeholder="MM / YY"></label>
-              <label>Security code<input name="security-code" inputmode="numeric" autocomplete="off" placeholder="CVC"></label>
+              <label>Expiration date *<input id="expiration" name="expiration" autocomplete="off" placeholder="MM / YY" inputmode="numeric" required aria-describedby="expiration-message"><small id="expiration-message" class="field-message" aria-live="polite"></small></label>
+              <label>Security code *<input id="security-code" name="security-code" inputmode="numeric" autocomplete="off" placeholder="CVC" required aria-describedby="security-code-message"><small id="security-code-message" class="field-message" aria-live="polite"></small></label>
             </div>
           </div>
         </section>
@@ -66,10 +68,10 @@
           <div><dt>Est. tax</dt><dd id="checkout-tax">$0.00</dd></div>
           <div class="checkout-total"><dt>Total</dt><dd id="checkout-total">$0.00</dd></div>
         </dl>
-        <button id="confirm-purchase" class="purchase-button" type="button"><span id="purchase-spinner" class="checkout-spinner" aria-hidden="true" hidden></span><span id="purchase-label">Confirm Purchase</span></button>
+        <button id="confirm-purchase" class="purchase-button" type="submit"><span id="purchase-spinner" class="checkout-spinner" aria-hidden="true" hidden></span><span id="purchase-label">Confirm Purchase</span></button>
         <p id="purchase-status" role="status" aria-live="polite"></p>
       </aside>
-    </div>
+    </form>
     <noscript>Please enable JavaScript to check out.</noscript>
   </main>
   <dialog id="purchase-success" class="purchase-success" aria-labelledby="success-title" aria-describedby="success-message">

@@ -4,6 +4,7 @@ const BagFeedback = (() => {
   dialog.className = 'bag-feedback';
   dialog.setAttribute('aria-labelledby', 'bag-feedback-title');
   dialog.setAttribute('aria-describedby', 'bag-feedback-item');
+ // adds the diolog to the body and sets up the inner HTML for the dialog, including a close button, spinner, status message, and actions for viewing the bag or continuing shopping
   dialog.innerHTML = `
     <button class="bag-feedback-close" type="button" aria-label="Close bag popup">&times;</button>
     <span class="bag-feedback-spinner" aria-hidden="true"></span>
@@ -32,8 +33,8 @@ const BagFeedback = (() => {
     submit.removeAttribute('aria-busy');
   }
 
+  // prevents the dialog from closing if the user clicks the "Continue shopping" button while the fake loading is still happening
   function close() {
-    // prevents the dialog from closing if the user clicks the "Continue shopping" button while the fake loading is still happening
     clearTimeout(timer);
     releaseButton();
     dialog.close();

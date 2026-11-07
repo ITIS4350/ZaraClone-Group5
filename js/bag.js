@@ -2,6 +2,7 @@
 const bagItems = document.getElementById('bag-items');
 const checkoutButton = document.getElementById('continue-shipping');
 const bagStatus = document.getElementById('bag-status');
+/*there is a way to mkae this more inclusive, but for this case only usd */ 
 const formatPrice = (amount) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
 
 const itemTemplate = document.getElementById('bag-item-template');
