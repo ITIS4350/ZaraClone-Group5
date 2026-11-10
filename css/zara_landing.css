@@ -71,10 +71,11 @@ footer {
   bottom: 0;
   width: 100%;
 }
-
+/* These currently appear to blended in with the backround it would be beneficial to conider some sort of seperation  
+  I think we could also make the footer and header buttons more "button-like" and less text-link-like.*/
 .site-footer div{
-  background-color: #000;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
   padding: 10px 0;
   text-align: center;
   display: flex;
