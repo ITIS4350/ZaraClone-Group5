@@ -4,7 +4,6 @@
   if (!placeholder) {
     return;
   }
-// change the data labels on the other links once those are implemented to make them active again, for now they are all set to false so that the active page is highlighted correctly
 // copied from the header in the landing page hence the comments still being included
   const template = document.createElement('template');
   template.innerHTML = `

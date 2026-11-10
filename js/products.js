@@ -6,8 +6,16 @@ const products = [
     "description": "Wide-leg blue jeans with an easy, relaxed silhouette.",
     "details": [
       {
-        "heading": "Product information",
-        "text": "Additional product details coming soon."
+        "heading": "Fabric & Fit",
+        "text": "Mid-weight denim with slight stretch. Features a high-rise waist, relaxed fit through the hip and thigh, five-pocket styling, and zip fly."
+      },
+      {
+        "heading": "Care Instructions",
+        "text": "Machine wash cold inside-out with like colors. Do not bleach. Tumble dry low or line dry. Warm iron if needed."
+      },
+      {
+        "heading": "Shipping & Returns",
+        "text": "Free standard shipping on orders over $50. Returns and exchanges accepted within 30 days of delivery."
       }
     ],
     "thumbnails": [
@@ -19,12 +27,12 @@ const products = [
     "price": 89,
     "colors": ["Mid Blue", "Black", "White"],
     "sizes": ["XS", "S", "M", "L", "XL"],
-    "image": "assets/products/wide-leg-blue-jeans.png",
+    "image": "assets/products/wide-legged-jeans/wide-leg-blue-jeans.png",
     "imageHeight": 188,
     "colorImages": {
-      "Mid Blue": "assets/products/wide-leg-blue-jeans.png",
-      "Black": "",
-      "White": ""
+      "Mid Blue": "assets/products/wide-legged-jeans/wide-leg-blue-jeans.png",
+      "Black": "assets/products/wide-legged-jeans/wide-leg-black-jeans.png",
+      "White": "assets/products/wide-legged-jeans/wide-leg-white-jeans.png"
     },
     "collections": ["women", "new-arrivals"],
     "featuredOrder": 2,

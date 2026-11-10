@@ -90,7 +90,7 @@
   margin-top: 16px;
   font-size: clamp(24px, 2.5vw, 32px);
 }
-
+/* TODO: there is little seperation in light in dark mode so this need to be fixed */
 .product-description {
   margin-top: 20px;
   color: var(--muted-color);
