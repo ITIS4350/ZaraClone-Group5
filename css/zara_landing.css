@@ -66,3 +66,25 @@
   .collection-section { padding-inline: 32px; }
   .collection-title { font-size: 36px; line-height: 40px; }
 }
+
+footer {
+  bottom: 0;
+  width: 100%;
+}
+
+.site-footer div{
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: var(--serif-font);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.site-footer div a:hover {
+  font-weight: bold;
+}
