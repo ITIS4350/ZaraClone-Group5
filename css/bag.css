@@ -26,23 +26,23 @@
 
 .bag-eyebrow {
   color: var(--muted-color);
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 600;
-  line-height: 16.5px;
+  line-height: 1.03125rem;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .bag-heading h1 {
   padding-top: 4px;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
-  line-height: 42px;
+  line-height: 2.625rem;
 }
 
 .bag-subtotal {
   color: var(--muted-color);
-  font-size: 14px;
+  font-size: 0.875rem;
   padding-bottom: 1px;
   white-space: nowrap;
 }
@@ -81,7 +81,7 @@
   height: 100%;
   min-height: 130px;
   object-fit: cover;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--text-color);
 }
 
@@ -103,15 +103,15 @@
 }
 
 .product-heading h2 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 1.375rem;
 }
 
 .product-heading p {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--muted-color);
-  line-height: 19.5px;
+  line-height: 1.21875rem;
   margin-top: 2px;
 }
 
@@ -120,8 +120,8 @@
 }
 
 .product-price {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
   white-space: nowrap;
 }
 
@@ -146,7 +146,7 @@
   height: 32px;
   border: 1px solid var(--text-color);
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: var(--muted-color);
 }
 
@@ -162,12 +162,12 @@
 .quantity {
   width: 24px;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
 .remove-item {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #c53434;
   padding: 6px;
   border-radius: 8px;
@@ -191,7 +191,7 @@
 
 .shipping-note {
   padding-top: 20px;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .order-summary {
@@ -206,16 +206,16 @@
 }
 
 .order-summary h2 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
-  line-height: 27px;
+  line-height: 1.6875rem;
 }
 
 .summary-details {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .summary-details>div,
@@ -238,7 +238,7 @@
 .summary-total {
   border-top: 1px solid var(--border-color);
   padding-top: 20px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -248,9 +248,9 @@
   border-radius: 12px;
   background: #171717;
   color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 21px;
+  line-height: 1.3125rem;
 }
 
 .checkout-button:hover {
@@ -273,7 +273,7 @@
 }
 
 .checkout-notice {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--muted-color);
 }
 
@@ -282,7 +282,7 @@
 }
 
 .empty-bag h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -321,7 +321,7 @@
   place-items: center;
   padding: 12px;
   color: var(--muted-color);
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
 }
 
@@ -361,8 +361,8 @@
   }
 
   .product-heading h2 {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
   }
 
   .product-actions {

@@ -46,7 +46,7 @@
   background: var(--surface-color);
   color: var(--active-color);
   text-align: center;
-  font-size: 11px;
+  font-size: 0.6875rem;
 }
 
 .product-photo {
@@ -62,7 +62,7 @@
 }
 
 .product-photo .product-placeholder {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .product-photo img,
@@ -82,13 +82,13 @@
 }
 
 .product-information h1 {
-  font-size: clamp(26px, 3vw, 40px);
+  font-size: clamp(1.625rem, 3vw, 2.5rem);
   line-height: 1.2;
 }
 
 .product-price {
   margin-top: 16px;
-  font-size: clamp(24px, 2.5vw, 32px);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
 .product-description {
@@ -105,7 +105,7 @@
 
 .product-information legend {
   margin-bottom: 12px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .product-options {
@@ -133,7 +133,7 @@
   min-width: 48px;
   height: 45px;
   border: 1px solid var(--muted-color);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 #product-sizes .product-option:hover { background-color:rgba(188, 188, 188, 0.5); }
@@ -173,7 +173,7 @@
   border-radius: 5px;
   background: var(--text-color);
   color: var(--background-color);
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .product-add:hover {
@@ -181,7 +181,7 @@
 }
 
 .product-message {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .product-message:not(:empty) {
@@ -201,7 +201,7 @@
 
 .product-details summary {
   padding: 10px 0;
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -215,7 +215,7 @@
 
 .product-details summary::after {
   content: '⌄';
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .product-details[open] summary::after {
@@ -248,7 +248,7 @@
 }
 
 .product-recommendations h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
@@ -274,13 +274,13 @@
 
 .recommended-product h3 {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 
 .recommended-product p {
   margin-top: 4px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .recommended-product:hover h3 {
@@ -307,7 +307,7 @@
   }
 
   .product-placeholder {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   .product-option span {
