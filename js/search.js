@@ -10,6 +10,9 @@
   const toggle = header.querySelector('button[aria-label="Search"]');
   // Resolve from this script so links also work from pages inside help/.
   const productUrl = new URL('../product.html', document.currentScript.src);
+  const newArrivalsUrl = new URL('../new_arrivals.html', document.currentScript.src);
+  const recommendedCount = 3;
+  const recommendedProducts = products.slice(0, recommendedCount);
   panel.classList.add('product-search-panel');
   panel.id = 'product-search-panel';
   field.classList.add('product-search-field');
@@ -39,15 +42,16 @@
   function renderResults() {
     const query = input.value.trim().toLowerCase();
     list.replaceChildren();
-    if (!query) {
-      hideResults();
-      return;
-    }
-    const matches = products.filter(product => product.name.toLowerCase().startsWith(query));
+    const matches = query
+      ? products.filter(product => product.name.toLowerCase().startsWith(query))
+      : recommendedProducts;
+    list.setAttribute('aria-label', query ? 'Matching products' : 'Recommended products');
     results.hidden = false;
-    status.textContent = matches.length
-      ? matches.length + (matches.length === 1 ? ' product found' : ' products found')
-      : 'No products found.';
+    status.textContent = !query
+      ? 'Recommended searches'
+      : matches.length
+        ? matches.length + (matches.length === 1 ? ' product found' : ' products found')
+        : 'No products found.';
     matches.forEach(product => {
       const item = document.createElement('li');
       const link = document.createElement('a');
@@ -83,6 +87,11 @@
   }
 
   panel.addEventListener('keydown', event => {
+    if (event.key === 'Enter' && event.target === input && !input.value.trim()) {
+      event.preventDefault();
+      window.location.href = newArrivalsUrl.href;
+      return;
+    }
     if (event.key === 'Escape') {
       if (panel.classList.contains('search-is-open') && getComputedStyle(toggle).display !== 'none') {
         toggle.focus();
