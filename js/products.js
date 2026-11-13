@@ -350,10 +350,10 @@ const products = [
     "price": 89,
     "colors": ["Classic Blue", "Black", "White"],
     "sizes": ["XS", "S", "M", "L", "XL"],
-    "image": "assets/products/wide-leg-blue-jeans.png",
+    "image": "assets/products/relaxed-blue-jeans.jpg",
     "imageHeight": 188,
     "colorImages": {
-      "Classic Blue": "assets/products/wide-leg-blue-jeans.png",
+      "Classic Blue": "assets/products/relaxed-blue-jeans.jpg",
       "Black": "",
       "White": ""
     },
