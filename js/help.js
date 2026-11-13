@@ -17,6 +17,14 @@
       }
     });
 
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        event.preventDefault();
+        mobileMenu.classList.remove('active');
+        menuBtn.focus();
+      }
+    });
+
     // 3. FAQ Accordion Logic
     const faqItems = document.querySelectorAll('.faq-item');
 

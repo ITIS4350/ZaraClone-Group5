@@ -4,6 +4,11 @@
   const themeIcon = document.getElementById('theme-icon');
   const htmlElement = document.documentElement;
   const storageKey = 'zara-theme-v1';
+  const themeTransitionStyle = document.createElement('style');
+  themeTransitionStyle.textContent = `
+    *, *::before, *::after { transition-property: none !important; }
+    .theme-toggle-thumb { transition-property: transform !important; }
+  `;
 
   function getSavedTheme() {
     try {
@@ -14,6 +19,7 @@
   }
 
   function setTheme(isDark) {
+    document.head.append(themeTransitionStyle);
     htmlElement.classList.toggle('dark', isDark);
     if (isDark) {
       htmlElement.setAttribute('data-theme', 'dark');
@@ -26,6 +32,8 @@
     if (themeIcon) {
       themeIcon.className = isDark ? 'fa-solid fa-moon' : 'fa-regular fa-moon';
     }
+    void htmlElement.offsetHeight;
+    themeTransitionStyle.remove();
   }
 
   setTheme(getSavedTheme() === 'dark');
