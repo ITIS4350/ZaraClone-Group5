@@ -25,7 +25,12 @@
         src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1920&auto=format&fit=crop"
         alt="ZARA New Collection Editorial Fashion"
         class="hero-image"
+        data-carousel-image
       />
+      <img src="assets/data-carousel-image/fashion-model-background-data-carousel-image1.jpg" alt="Fashion editorial from the new collection" class="hero-image" data-carousel-image hidden />
+      <img src="assets/data-carousel-image/fashion-model-background-data-carousel-image2.webp" alt="Fashion editorial from the new collection" class="hero-image" data-carousel-image hidden />
+      <img src="assets/data-carousel-image/fashion-model-background-data-carousel-image3.webp" alt="Fashion editorial from the new collection" class="hero-image" data-carousel-image hidden />
+      <img src="assets/data-carousel-image/fashion-model-background-data-carousel-image5.webp" alt="Fashion editorial from the new collection" class="hero-image" data-carousel-image hidden />
 
       <!-- Dark Gradient Overlay for readability -->
       <div class="hero-gradient"></div>
@@ -41,31 +46,27 @@
       </div>
 
       <!-- Carousel Dots -->
-      <div class="carousel-indicators">
-        <button class="carousel-dot" aria-label="Slide 1"></button>
-        <button class="carousel-dot" aria-label="Slide 2"></button>
-        <button class="carousel-dot is-active" aria-label="Slide 3 Active"></button>
-        <button class="carousel-dot" aria-label="Slide 4"></button>
-        <button class="carousel-dot" aria-label="Slide 5"></button>
-        <button class="carousel-dot" aria-label="Slide 6"></button>
+      <div class="carousel-controls" aria-label="Featured images">
+        <button class="carousel-arrow carousel-previous" type="button" aria-label="Previous image">‹</button>
+        <div class="carousel-indicators" aria-label="Choose a featured image"></div>
+        <button class="carousel-arrow carousel-next" type="button" aria-label="Next image">›</button>
       </div>
-
-      <!-- Bottom Down Arrow Scroll Icon -->
-      <a
-        href="#next-section"
-        class="scroll-down"
-        aria-label="Scroll Down"
-      >
-        <i class="fa-solid fa-arrow-down"></i>
-      </a>
 
     </div>
   </main>
-
   <!-- Secondary Content Section (For smooth scrolling target) -->
   <section id="next-section" class="collection-section">
     <p class="collection-eyebrow">Autumn / Winter Collection</p>
     <h2 class="collection-title">Editorial Essentials</h2>
+    <div class="home-products-heading">
+      <h3>New Arrivals</h3>
+      <div class="home-product-controls">
+        <button type="button" class="home-product-previous" aria-label="Scroll products left">‹</button>
+        <button type="button" class="home-product-next" aria-label="Scroll products right">›</button>
+      </div>
+    </div>
+    <div class="home-product-carousel" aria-label="New arrival products" tabindex="0"></div>
+    <a class="home-view-all" href="new_arrivals.html">View all new arrivals</a>
   </section>
 
   <script src="js/header.js"></script>
@@ -74,10 +75,16 @@
 
   <script src="js/products.js"></script>
   <script src="js/search.js"></script>
+  <script src="js/home.js"></script>
 
   <!-- Footer -->
-  <footer class="site-footer">
-        <div><a href="help/index.html">Help</a><br><a href="https://instagram.com">Social Media</a><br><a href="help/index.html">Settings</a><br><a href="zara_landing_page.html">Back to Top</a></div>
+   <footer class="site-footer">
+    <div>
+      <a href="help/index.html">Help</a>
+      <a href="https://instagram.com">Social Media</a>
+      <a href="help/index.html">Settings</a>
+      <a href="zara_landing_page.html">Back to Top</a>
+    </div>
   </footer>
 </body>
 </html>

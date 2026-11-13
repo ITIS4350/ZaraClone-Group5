@@ -11,6 +11,7 @@
   // Resolve from this script so links also work from pages inside help/.
   const productUrl = new URL('../product.html', document.currentScript.src);
   const newArrivalsUrl = new URL('../new_arrivals.html', document.currentScript.src);
+  const searchResultsUrl = new URL('../search_results.html', document.currentScript.src);
   const recommendedCount = 3;
   const recommendedProducts = products.slice(0, recommendedCount);
   panel.classList.add('product-search-panel');
@@ -87,9 +88,15 @@
   }
 
   panel.addEventListener('keydown', event => {
-    if (event.key === 'Enter' && event.target === input && !input.value.trim()) {
+    if (event.key === 'Enter' && event.target === input) {
       event.preventDefault();
-      window.location.href = newArrivalsUrl.href;
+      const query = input.value.trim();
+      if (!query) {
+        window.location.href = newArrivalsUrl.href;
+        return;
+      }
+      searchResultsUrl.searchParams.set('q', query);
+      window.location.href = searchResultsUrl.href;
       return;
     }
     if (event.key === 'Escape') {
