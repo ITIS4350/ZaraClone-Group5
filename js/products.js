@@ -19,10 +19,9 @@ const products = [
       }
     ],
     "thumbnails": [
-      // "assets/products/wide-legged-jeans-side.png",
-      // "assets/products/wide-legged-jeans-back.png",
-      // "assets/products/wide-legged-jeans-detail.png",
-      // "assets/products/wide-legged-jeans-alternate.png"
+      "assets/products/wide-legged-jeans/wide-leg-black-jeans-side.png",
+      "assets/products/wide-legged-jeans/wide-leg-black-jeans-back.png",
+      "assets/products/wide-legged-jeans/wide-leg-black-jeans-detailed.png"
     ],
     "price": 89,
     "colors": ["Mid Blue", "Black", "White"],

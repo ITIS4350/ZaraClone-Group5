@@ -108,7 +108,7 @@
   display: grid;
   place-items: center;
   padding: 24px;
-  color: var(--muted-color);
+  color: var(--active-color);
   font-size: 0.8125rem;
   text-align: center;
 }

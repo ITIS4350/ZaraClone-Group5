@@ -232,7 +232,7 @@
 }
 
 .checkout-item p {
-  color: var(--muted-color);
+  color: var(--active-color);
   margin-bottom: 4px;
 }
 

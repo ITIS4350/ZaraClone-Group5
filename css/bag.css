@@ -128,6 +128,7 @@
 .product-actions {
   padding-top: 14px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 4px;
@@ -167,26 +168,26 @@
 }
 
 .remove-item {
+  min-height: 32px;
+  padding: 4px 10px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: #fff4f4;
+  color: #a32121;
   font-size: 0.75rem;
-  color: #c53434;
-  padding: 6px;
-  border-radius: 8px;
-  opacity: 0.5;
 }
 
 .remove-item:hover {
-  opacity: 1;
+  background: #ffe3e3;
 }
 
 .dark .remove-item {
-  color: #ff8a8a;
-  opacity: 1;
+  background: #321d1d;
+  color: #ffb3b3;
 }
 
-.dark .remove-item:hover,
-.dark .remove-item:focus-visible {
-  color: #ffb3b3;
-  background: #3b2222;
+.dark .remove-item:hover {
+  background: #492626;
 }
 
 .shipping-note {
@@ -320,7 +321,7 @@
   display: grid;
   place-items: center;
   padding: 12px;
-  color: var(--muted-color);
+  color: var(--active-color);
   font-size: 0.75rem;
   text-align: center;
 }

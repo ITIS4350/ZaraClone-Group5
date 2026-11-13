@@ -49,14 +49,12 @@
   function renderGallery() {
     showImage(photo, getProductImage(product, color), product.name + ' in ' + color);
     thumbnails.replaceChildren();
-    for (let index = 0; index < 4; index++) {
+    const galleryImages = [getProductImage(product, color), ...(product.thumbnails || []).filter(Boolean)];
+    galleryImages.forEach((source, index) => {
      // in the future more images would be nice for the other colours it woudl be easy to just recolor the image with a photo editor or somthing. 
-      const source = index === 0
-        ? getProductImage(product, color)
-        : color === product.colors[0] ? product.thumbnails?.[index - 1] : '';
       // the alt text is a bit long but it is better for accessibility and screen readers.
-      const label = index === 0 ? 'main photo' : 'additional photo ' + index;
-      const alt = product.name + ' in ' + color + ', ' + label;
+      const label = index === 0 ? 'main photo' : ['side view', 'back view', 'detail view'][index - 1] || 'additional photo ' + index;
+      const alt = index === 0 ? product.name + ' in ' + color + ', ' + label : product.name + ', ' + label;
       // the slot is a button if there is a source image, otherwise it is just a div with text.
       // or basically no image it uniteractable but with a image it is a button that will show the image in the main photo area.
       const slot = document.createElement(source ? 'button' : 'div');
@@ -68,7 +66,7 @@
       }
       showImage(slot, source, alt, 'Image coming soon');
       thumbnails.append(slot);
-    }
+    });
   }
   // the main photo is the first image in the product images array, and the other images are the rest of the images in the array.
   function addOption(container, name, value, index) {
@@ -79,17 +77,23 @@
     input.name = name;
     input.value = value;
     input.required = true;
-    input.setAttribute('aria-label', value);
     const visual = document.createElement('span');
-    visual.setAttribute('aria-hidden', 'true');
+    visual.className = 'product-option-visual';
     if (name === 'color') {
       input.checked = index === 0;
       label.title = value;
+      visual.setAttribute('aria-hidden', 'true');
       visual.style.setProperty('--swatch-color', swatches[value] || '#888888');
     } else {
       visual.textContent = value;
     }
     label.append(input, visual);
+    if (name === 'color') {
+      const colorName = document.createElement('span');
+      colorName.className = 'product-color-name';
+      colorName.textContent = value;
+      label.append(colorName);
+    }
     container.append(label);
   }
   // basically just retrives all the infor the header are not preset for the details since diffrent items would need diffrent details 

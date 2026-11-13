@@ -126,7 +126,7 @@
   opacity: 0;
 }
 
-.product-option span {
+.product-option-visual {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,7 +152,16 @@
   outline-offset: 4px;
 }
 
-.product-color span {
+.product-color-name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.product-color .product-option-visual {
   min-width: 40px;
   width: 40px;
   height: 40px;
@@ -310,11 +319,11 @@
     font-size: 0.8125rem;
   }
 
-  .product-option span {
+  .product-option-visual {
     min-width: 56px;
   }
 
-  .product-color span {
+  .product-color .product-option-visual {
     min-width: 40px;
   }
 

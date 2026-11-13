@@ -9,7 +9,7 @@ const BagFeedback = (() => {
     <button class="bag-feedback-close" type="button" aria-label="Close bag popup">&times;</button>
     <span class="bag-feedback-spinner" aria-hidden="true"></span>
     <div role="status" aria-live="polite" aria-atomic="true">
-      <h2 id="bag-feedback-title" tabindex="-1"></h2>
+      <h2 id="bag-feedback-title" tabindex="-1">Add to Bag</h2>
     </div>
     <p id="bag-feedback-item"></p>
     <div class="bag-feedback-actions" hidden>
