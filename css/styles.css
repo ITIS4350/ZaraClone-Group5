@@ -62,6 +62,10 @@ body.menu-open { overflow: hidden; }
 .site-footer a { display: block; }
 .site-footer a:hover { font-weight: 700; }
 
+@media (max-width: 767px) {
+  .site-footer a:last-child { grid-column: 1 / -1; }
+}
+
 /* Header */
 .site-header {
   width: 100%;
@@ -193,7 +197,7 @@ body.menu-open { overflow: hidden; }
   .header-actions { gap: 32px; }
   .header-search, .header-links { display: flex; }
   .mobile-action { display: none; }
-  .site-footer > div { grid-template-columns: repeat(4, max-content); justify-content: center; gap: 28px; }
+  .site-footer > div { grid-template-columns: repeat(3, max-content); justify-content: center; gap: 28px; }
 }
 .drawer-logo { font-size: 1.875rem; font-weight: 700; }
 

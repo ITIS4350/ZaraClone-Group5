@@ -1,4 +1,8 @@
 /* Bag-specific layout; shared navigation and theme live in styles.css. */
+.dark body.bag-page {
+  background: linear-gradient(135deg, #171717 0%, #22291f 55%, #171717 100%);
+}
+
 .bag-layout {
   font-family: 'DM Sans', 'Arial', sans-serif;
   width: 100%;

@@ -37,7 +37,6 @@
     <!-- Right Section: Links & Dark Mode Toggle -->
     <div class="header-actions">
       <div class="header-links">
-        <a href="#" class="header-link">Settings</a>
         <a href="help/index.html" class="header-link">Help</a>
         <a href="bag_page.html" class="header-link">Bag</a>
       </div>
@@ -87,7 +86,6 @@
       </div>
 
       <div class="menu-footer">
-        <a href="#">Settings</a>
         <a href="help/index.html">Help &amp; Support</a>
         <a href="bag_page.html">Shopping Bag</a>
       </div>

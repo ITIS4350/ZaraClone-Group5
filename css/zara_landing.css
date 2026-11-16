@@ -89,7 +89,7 @@ footer {
 .site-footer a { display: block; }
 
 @media (min-width: 768px) {
-  .site-footer div { grid-template-columns: repeat(4, max-content); justify-content: center; gap: 28px; }
+  .site-footer div { grid-template-columns: repeat(3, max-content); justify-content: center; gap: 28px; }
 }
 
 .site-footer div a:hover {

@@ -1,3 +1,10 @@
+.dark body.checkout-page {
+  background-color: #171717;
+  background-image: linear-gradient(315deg, #171717 0%, #22291f 55%, #171717 100%);
+  /* background-repeat: no-repeat;  without the gradiants repeats and looks choppy on some screens, so we repeat it to fill the space  */
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 .checkout-layout {
   width: 100%;
@@ -157,6 +164,20 @@
   height: 18px;
   flex-shrink: 0;
   accent-color: var(--text-color);
+}
+
+.dark .checkout-choice {
+  background: var(--surface-color);
+  border-color: #858585;
+}
+
+.dark .checkout-choice:hover {
+  background: #333333;
+}
+
+.dark .checkout-choice:has(input:checked) {
+  background: #3a3a3a;
+  border-color: var(--text-color);
 }
 
 .checkout-choice strong,
