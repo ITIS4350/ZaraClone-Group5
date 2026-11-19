@@ -18,7 +18,7 @@
         </svg>
       </button>
 
-      <a href="zara_landing_page.html" class="zara-logo">
+      <a href="index.html" class="zara-logo">
         ZARA
       </a>
     </div>
